@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family: "Roboto", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -18,20 +19,78 @@ html, body {
 .SidebarMenu {
   grid-column: 1;
   grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
   background-color: #2C3E50;
 }
-.SidebarMenu .sidebar-heading {
-  grid-row-start: 1;
+.SidebarMenu__heading {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 70px;
 }
-.SidebarMenu .sidebar-list {
+.SidebarMenu__heading span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.065em;
+}
+.SidebarMenu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-direction: column;
-  grid-row-start: 2;
+}
+.SidebarMenu__list span {
+  padding-left: 30px;
+  padding-bottom: 25px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #B6B6B6;
+}
+.SidebarMenu__list li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 17px;
+  width: 100%;
+  height: 50px;
+  padding-left: 30px;
+  list-style: none;
+  transition: background 0.3s;
+}
+.SidebarMenu__list li:hover {
+  background: #1e2a36;
+}
+.SidebarMenu__list li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 17px;
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: #F6F7FA;
+  transition: padding-left 0.3s;
 }
 
 .TopbarMenu {
   grid-column: 2;
   grid-row: 1/2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #e1e1e1;
 }
 

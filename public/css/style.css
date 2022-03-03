@@ -91,7 +91,50 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e1e1e1;
+  padding: 0px 60px 0px 30px;
+}
+.TopbarMenu__burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.TopbarMenu__Right {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.TopbarMenu__Right__notification i {
+  color: #2C3E50;
+}
+.TopbarMenu__Right__user {
+  display: flex;
+  gap: 20px;
+  width: 200px;
+}
+.TopbarMenu__Right__user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.TopbarMenu__Right__user__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.TopbarMenu__Right__user__description :first-child {
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  font-size: 16px;
+  line-height: 20px;
+  color: #242424;
+}
+.TopbarMenu__Right__user__description :last-child {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4e4e4e;
 }
 
 body {
@@ -99,12 +142,53 @@ body {
   grid-template-columns: 250px 1fr;
   grid-template-rows: 70px 1fr;
 }
-body .TopbarMenu {
-  background-color: #e1e1e1;
-}
 
 /**display: grid;
 grid-template-columns: repeat(12, 1fr);
 grid-template-rows: repeat(12, 1fr);**/
+.burger {
+  width: 22px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  /*
+  &.active span{
+    background-color: transparent;
+
+    &::before{
+      transform: translateY(0) rotateZ(45deg);
+    }
+    &::after{
+      transform: translateY(0) rotateZ(-45deg);
+    }
+  }
+  */
+}
+.burger span {
+  width: 100%;
+  height: 3px;
+  background: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.1s ease-in-out;
+  border-radius: 0px;
+}
+.burger span::before, .burger span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 0px;
+  background: black;
+  transition: transform 0.2s ease-in-out;
+}
+.burger span::before {
+  transform: translateY(-7px);
+}
+.burger span::after {
+  transform: translateY(7px);
+}
 
 /*# sourceMappingURL=style.css.map */

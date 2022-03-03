@@ -8,10 +8,11 @@
     <title>Template Back Office</title>
 
     <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <nav class="SidebarMenu">
+<body id="grid">
+    <nav class="SidebarMenu" id="menu">
         <div class="SidebarMenu__heading">
             <span>Panel</span>
         </div>
@@ -103,9 +104,47 @@
         </ul>
     </nav>
 
+    <nav class="SidebarMenuSmall" id="menu">
+        <div class="SidebarMenuSmall__logo">
+            
+        </div>
+        <ul class="SidebarMenuSmall__list">
+            <span>navigation</span>
+            <li>
+                <a href="index.html">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.99984 4.74167L14.1665 8.49167V15H12.4998V10H7.49984V15H5.83317V8.49167L9.99984 4.74167ZM9.99984 2.5L1.6665 10H4.1665V16.6667H9.1665V11.6667H10.8332V16.6667H15.8332V10H18.3332L9.99984 2.5Z" fill="#F6F7FA"/>
+                    </svg>
+
+                    Dashboards
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <div class="TopbarMenu">
+
+        <div class="TopbarMenu__burger">
+            <div id="burger" class="burger">
+                <span>
+                </span>
+            </div>
+        </div>
+
+        <div class="TopbarMenu__Right">
+            <div class="TopbarMenu__Right__notification">
+                <i class="fa-regular fa-bell fa-xl"></i>
+            </div>
+            <div class="TopbarMenu__Right__user">
+                <img src="https://avatars.githubusercontent.com/u/50832720?v=4" alt="">
+                <div class="TopbarMenu__Right__user__description">
+                    <span>Aurélien Heude</span>
+                    <span>Développeur web</span>
+                </div>
+            </div>
+        </div>
         
     </div>
-
+<script src="public/js/burger.js"></script>
 </body>
 </html>

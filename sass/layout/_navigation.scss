@@ -87,6 +87,26 @@
     }
 }
 
+.SidebarMenuSmall{
+    grid-column: 1;
+    grid-row: 1 / 3;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    
+    background-color: #2C3E50;
+    &__logo{
+        width: 30px;
+        height: 70px;
+        background: green;
+    }
+
+    &__list{
+        
+    }
+}
+
 .TopbarMenu {
     grid-column: 2;
     grid-row: 1 / 2;
